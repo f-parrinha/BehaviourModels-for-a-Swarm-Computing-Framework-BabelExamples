@@ -1,0 +1,18 @@
+package numberSet.common.common;
+
+import java.net.InetAddress;
+
+typestate NetworkEndpoint {
+    Init = {
+        void init(String, String): Exec,
+        drop: end
+    }
+
+    Exec = {
+        InetAddress getInetAddress(): Exec,
+        String getAddress(): Exec,
+        String getPort(): Exec,
+        String getName(): Exec,
+        drop: end
+    }
+}

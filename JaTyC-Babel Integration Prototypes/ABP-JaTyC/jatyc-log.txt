@@ -1,0 +1,162 @@
+rc/main/java/abp/Main.java:21: error: Cannot access [abp.Main.DEFAULT_CONF]
+        Properties props = Babel.loadConfig(args, DEFAULT_CONF);
+                                                  ^
+src/main/java/abp/Main.java:25: error: Cannot call [registerProtocol] on null (found: Shared{pt.unl.fct.di.novasys.babel.core.Babel} | Null)
+        babel.registerProtocol(alternatingBitProto);
+             ^
+src/main/java/abp/Main.java:27: error: Incompatible parameter: cannot cast from Shared{java.util.Properties} | Null to Shared{java.util.Properties}
+        alternatingBitProto.init(props);
+                                 ^
+src/main/java/abp/AlternatingBitProtocol.java:70: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.events.OutConnectionUp.EVENT_ID]
+        registerChannelEventHandler(channelId, OutConnectionUp.EVENT_ID,
+                                                              ^
+src/main/java/abp/AlternatingBitProtocol.java:163: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.ADDRESS_KEY]
+            channelProps.setProperty(TCPChannel.ADDRESS_KEY, myAddress);
+                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:86: error: Cannot access [this]
+                (ConnectionRetryTimer timer, long id) -> uponConnectionRetryTimer(timer, id));
+                                                         ^
+src/main/java/abp/AlternatingBitProtocol.java:71: error: Cannot access [this]
+                (OutConnectionUp event, int channel) -> uponOutConnectionUp(event, channel));
+                                                        ^
+src/main/java/abp/AlternatingBitProtocol.java:78: error: Cannot access [this]
+                (BitAck msg, Host host, short proto, int chan) -> uponBitAck(msg, host, proto, chan));
+                                                                  ^
+src/main/java/abp/AlternatingBitProtocol.java:105: error: Cannot call [equals] on null (found: Shared{pt.unl.fct.di.novasys.network.data.Host} | Null)
+        if (myself.equals(sender)) {
+                  ^
+src/main/java/abp/AlternatingBitProtocol.java:48: error: Cannot call [getHostAddress] on null (found: Shared{java.net.InetAddress} | Null)
+        int channelId = createTcpChannel(address.getHostAddress(), myPort);
+                                                ^
+src/main/java/abp/AlternatingBitProtocol.java:135: error: Incompatible parameter: cannot cast from Null | Primitive{int} to Primitive{int}
+            sendMessage(new BitAck(lastAckBit), sender);
+                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:27: error: Incompatible parameter: cannot cast from Bottom to Shared{java.lang.Class}
+    private static final Logger logger = LogManager.getLogger(AlternatingBitProtocol.class);
+                                                                                    ^
+src/main/java/abp/AlternatingBitProtocol.java:115: error: Cannot access [abp.AlternatingBitProtocol.logger]
+        logger.info(event);
+        ^
+src/main/java/abp/AlternatingBitProtocol.java:167: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.CONNECT_TIMEOUT_KEY]
+            channelProps.setProperty(TCPChannel.CONNECT_TIMEOUT_KEY, "1000");
+                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:77: error: Cannot access [abp.messages.BitAck.ID]
+        registerMessageHandler(channelId, BitAck.ID,
+                                                ^
+src/main/java/abp/AlternatingBitProtocol.java:142: error: Cannot call [getBit] on null (found: Shared{abp.messages.BitSend} | Null)
+        if (message.getBit() == toSendMessage.getBit()) {
+                                             ^
+src/main/java/abp/AlternatingBitProtocol.java:56: error: Cannot access [abp.messages.BitMessage.STARTING_RECEIVER_BIT]
+        this.lastAckBit = BitMessage.STARTING_RECEIVER_BIT;
+                                    ^
+src/main/java/abp/AlternatingBitProtocol.java:83: error: Cannot access [abp.timers.BitTimer.ID]
+        registerTimerHandler(BitTimer.ID,
+                                     ^
+src/main/java/abp/AlternatingBitProtocol.java:84: error: Cannot access [this]
+                (BitTimer timer, long id) -> uponBitTimer(timer, id));
+                                             ^
+src/main/java/abp/AlternatingBitProtocol.java:53: error: Incompatible parameter: cannot cast from Shared{java.lang.String} | Null to Shared{java.lang.String}
+        this.sender = new Host(address, Integer.parseInt(senderPort));
+                                                         ^
+src/main/java/abp/AlternatingBitProtocol.java:75: error: Cannot access [abp.messages.BitSend.ID]
+        registerMessageHandler(channelId, BitSend.ID,
+                                                 ^
+src/main/java/abp/AlternatingBitProtocol.java:164: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.PORT_KEY]
+            channelProps.setProperty(TCPChannel.PORT_KEY, port);
+                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:39: error: Cannot access [abp.AlternatingBitProtocol.PROTO_ID]
+        super(PROTO_NAME, PROTO_ID);
+                          ^
+src/main/java/abp/AlternatingBitProtocol.java:48: error: Incompatible parameter: cannot cast from Shared{java.lang.String} | Null to Shared{java.lang.String}
+        int channelId = createTcpChannel(address.getHostAddress(), myPort);
+                                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:79: error: Cannot access [abp.messages.BitSend.ID]
+        registerMessageSerializer(channelId, BitSend.ID, BitSend.serializer);
+                                                    ^
+src/main/java/abp/AlternatingBitProtocol.java:95: error: Incompatible parameter: cannot cast from Shared{pt.unl.fct.di.novasys.network.data.Host} | Null to Shared{java.lang.Object}
+        if (myself.equals(receiver)) {
+                          ^
+src/main/java/abp/AlternatingBitProtocol.java:165: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.HEARTBEAT_INTERVAL_KEY]
+            channelProps.setProperty(TCPChannel.HEARTBEAT_INTERVAL_KEY, "1000");
+                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:101: error: Incompatible parameter: cannot cast from Shared{pt.unl.fct.di.novasys.network.data.Host} | Null to Shared{pt.unl.fct.di.novasys.network.data.Host}
+        openConnection(peer);
+                       ^
+src/main/java/abp/AlternatingBitProtocol.java:57: error: Cannot access [abp.messages.BitMessage.STARING_SENDING_BIT]
+        this.toSendMessage = new BitSend(BitMessage.STARING_SENDING_BIT);
+                                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:95: error: Cannot call [equals] on null (found: Shared{pt.unl.fct.di.novasys.network.data.Host} | Null)
+        if (myself.equals(receiver)) {
+                  ^
+src/main/java/abp/AlternatingBitProtocol.java:80: error: Cannot access [abp.messages.BitAck.serializer]
+        registerMessageSerializer(channelId, BitAck.ID, BitAck.serializer);
+                                                              ^
+src/main/java/abp/AlternatingBitProtocol.java:150: error: Incompatible parameter: cannot cast from Shared{abp.messages.BitSend} | Null to Shared{pt.unl.fct.di.novasys.babel.generic.ProtoMessage}
+        sendMessage(toSendMessage, receiver);
+                    ^
+src/main/java/abp/AlternatingBitProtocol.java:80: error: Cannot access [abp.messages.BitAck.ID]
+        registerMessageSerializer(channelId, BitAck.ID, BitAck.serializer);
+                                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:85: error: Cannot access [abp.timers.ConnectionRetryTimer.ID]
+        registerTimerHandler(ConnectionRetryTimer.ID,
+                                                 ^
+src/main/java/abp/AlternatingBitProtocol.java:48: error: Incompatible parameter: cannot cast from Shared{java.lang.String} | Null to Shared{java.lang.String}
+        int channelId = createTcpChannel(address.getHostAddress(), myPort);
+                                                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:68: error: Cannot access [this]
+                (OutConnectionFailed<ProtoMessage>event, int channel) -> uponOutConnectionFailed(event, channel));
+                                                                         ^
+src/main/java/abp/AlternatingBitProtocol.java:136: error: Cannot access [abp.AlternatingBitProtocol.logger]
+            logger.info("Received a repeated bit");
+            ^
+src/main/java/abp/AlternatingBitProtocol.java:39: error: Cannot access [abp.AlternatingBitProtocol.PROTO_NAME]
+        super(PROTO_NAME, PROTO_ID);
+              ^
+src/main/java/abp/AlternatingBitProtocol.java:105: error: Incompatible parameter: cannot cast from Shared{pt.unl.fct.di.novasys.network.data.Host} | Null to Shared{java.lang.Object}
+        if (myself.equals(sender)) {
+                          ^
+src/main/java/abp/AlternatingBitProtocol.java:128: error: Cannot access [abp.AlternatingBitProtocol.logger]
+        LogUtils.ReceivedMessage(logger, sender, message);
+                                 ^
+src/main/java/abp/AlternatingBitProtocol.java:166: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.HEARTBEAT_TOLERANCE_KEY]
+            channelProps.setProperty(TCPChannel.HEARTBEAT_TOLERANCE_KEY, "3000");
+                                               ^
+src/main/java/abp/AlternatingBitProtocol.java:44: error: Incompatible parameter: cannot cast from Shared{java.lang.String} | Null to Shared{java.lang.String}
+        InetAddress address = InetAddress.getByName(properties.getProperty("address"));
+                                                                          ^
+src/main/java/abp/AlternatingBitProtocol.java:79: error: Cannot access [abp.messages.BitSend.serializer]
+        registerMessageSerializer(channelId, BitSend.ID, BitSend.serializer);
+                                                                ^
+src/main/java/abp/AlternatingBitProtocol.java:52: error: Incompatible parameter: cannot cast from Shared{java.lang.String} | Null to Shared{java.lang.String}
+        this.receiver = new Host(address, Integer.parseInt(receiverPort));
+                                                           ^
+src/main/java/abp/AlternatingBitProtocol.java:150: error: Incompatible parameter: cannot cast from Shared{pt.unl.fct.di.novasys.network.data.Host} | Null to Shared{pt.unl.fct.di.novasys.network.data.Host}
+        sendMessage(toSendMessage, receiver);
+                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:67: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.events.OutConnectionFailed.EVENT_ID]
+        registerChannelEventHandler(channelId, OutConnectionFailed.EVENT_ID,
+                                                                  ^
+src/main/java/abp/AlternatingBitProtocol.java:153: error: Incompatible parameter: cannot cast from Shared{pt.unl.fct.di.novasys.network.data.Host} | Null to Shared{pt.unl.fct.di.novasys.network.data.Host}
+        openConnection(this.receiver);
+                           ^
+src/main/java/abp/AlternatingBitProtocol.java:168: error: Cannot access [pt.unl.fct.di.novasys.channel.tcp.TCPChannel.NAME]
+            int channelId = createChannel(TCPChannel.NAME, channelProps);
+                                                    ^
+src/main/java/abp/AlternatingBitProtocol.java:120: error: Cannot access [abp.AlternatingBitProtocol.logger]
+        logger.info("Connection failed. Retrying...");
+        ^
+src/main/java/abp/AlternatingBitProtocol.java:27: error: Cannot access [abp.AlternatingBitProtocol.class]
+    private static final Logger logger = LogManager.getLogger(AlternatingBitProtocol.class);
+                                                                                    ^
+src/main/java/abp/AlternatingBitProtocol.java:76: error: Cannot access [this]
+                (BitSend msg, Host host, short proto, int chan) -> uponBitSend(msg, host, proto, chan));
+                                                                   ^
+src/main/java/abp/AlternatingBitProtocol.java:140: error: Cannot access [abp.AlternatingBitProtocol.logger]
+        LogUtils.ReceivedMessage(logger, sender, message);
+                                 ^
+src/main/java/abp/AlternatingBitProtocol.java:170: error: Cannot access [abp.AlternatingBitProtocol.logger]
+            logger.info("TCP Channel on {}:{}", myAddress, port);
+            ^
+53 errors
+
+

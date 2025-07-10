@@ -1,0 +1,6 @@
+typestate AlternatingBitProtocol {
+    Init = {
+        void connect(): Start,
+        drop: end
+    }
+}

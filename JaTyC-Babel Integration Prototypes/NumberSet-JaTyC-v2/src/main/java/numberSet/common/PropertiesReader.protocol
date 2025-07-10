@@ -1,0 +1,17 @@
+package numberSet.common.common;
+
+import java.util.Properties;
+
+typestate PropertiesReader {
+    Init = {
+        void load(Properties): Exec,
+        drop: end
+    }
+
+    Exec = {
+        void load(Properties): Exec,
+        Properties getProperties(): Exec,
+        String read(String): Exec,
+        drop: end
+    }
+}

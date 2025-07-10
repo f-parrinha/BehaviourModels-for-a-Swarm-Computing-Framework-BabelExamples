@@ -1,0 +1,18 @@
+package numberSet.session;
+
+import pt.unl.fct.di.novasys.network.data.Host;
+import java.util.*;
+
+typestate SessionController {
+    Init = {
+        void init(List): Exec,
+        drop: end
+    }
+
+    Exec = {
+        Iterator iterator(): Exec,
+        PeerSession get(Host): Exec,
+        boolean isComplete(): Exec,
+        drop: end
+    }
+}

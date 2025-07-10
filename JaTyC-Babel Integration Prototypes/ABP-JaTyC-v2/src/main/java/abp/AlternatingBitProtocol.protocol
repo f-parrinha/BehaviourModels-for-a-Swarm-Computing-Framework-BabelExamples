@@ -1,0 +1,15 @@
+package abp;
+
+import java.util.Properties;
+
+typestate AlternatingBitProtocol {
+    Init = {
+        void init(Properties): Exec,
+        drop: end
+    }
+
+    Exec = {
+        void startSend(): Exec,
+        drop:end
+    }
+}

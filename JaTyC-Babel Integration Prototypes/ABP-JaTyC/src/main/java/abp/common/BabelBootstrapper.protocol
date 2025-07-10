@@ -1,0 +1,15 @@
+package abp.common;
+
+import pt.unl.fct.di.novasys.babel.core.GenericProtocol;
+
+typestate BabelBootstrapper {
+    Init = {
+        void loadConfig(String[], String): Exec,
+        drop: end
+    }
+
+    Exec = {
+        void registerProtocol(GenericProtocol): Exec,
+        void boot(): end
+    }
+}

@@ -1,0 +1,21 @@
+package numberSet.session;
+
+import numberSet.messages.SetAckMessage;
+import pt.unl.fct.di.novasys.network.data.Host;
+import java.util.*;
+
+typestate PeerSession {
+    Init = {
+        void init(Host): Exec,
+        drop: end
+    }
+
+    Exec = {
+        List getToAck(): Exec,
+        Host getPeer(): Exec,
+        boolean isEmpty(): Exec,
+        void add(int): Exec,
+        void ack(SetAckMessage): Exec,
+        drop: end
+    }
+}
