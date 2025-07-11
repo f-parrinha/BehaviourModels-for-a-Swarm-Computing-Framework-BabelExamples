@@ -1,4 +1,6 @@
 # BehaviourModels for a Swarm Computing Framework
+(The report is also included in the repository)
+
 ### Babel Examples
 
 The prototype projects in this repository were devoleped during the planning for the thesis BehaviourModels for a Swarm Computing Framework. There are three prototype projects: Alternating Bit Protocol, Number Set Protocol and Bit Vote Protocol
