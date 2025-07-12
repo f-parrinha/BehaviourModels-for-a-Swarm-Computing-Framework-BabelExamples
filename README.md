@@ -1,5 +1,5 @@
 # BehaviourModels for a Swarm Computing Framework
-(The report is also included in the repository)
+The report is also included in the repository (at the root) with name "report.pdf"
 
 ### Babel Examples
 
